@@ -1,0 +1,51 @@
+<div style="text-align: center">
+    <h3>{{message}}</h3>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12">
+            <h2 class = "mt-4 mb-4">Registration Form</h2>
+            <form>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                    <li><input required type="text" [(ngModel)]="user.username" name="username" id="username"
+                            class="form-control phone" maxlength="28" placeholder="Enter username" /></li>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstname">Firstname</label>
+                       <li> <input class="form-control" type="text" [(ngModel)]="user.firstname" name="firstname" id="txt" required
+                            placeholder="Enter your firstname" /></li>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">Lastname</label>
+                    <li>  <input class="form-control" type="text" [(ngModel)]="user.lastname" name="lastname" id="txt"
+                            placeholder="Enter your lastname" required /></li>
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                    <li> <input class="form-control" required type="text" [(ngModel)]="user.age" name="age"
+                            id="age" placeholder="Enter your age" /></li>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                    <li> <input class="form-control" required type="password" [(ngModel)]="user.password" name="password"
+                            id="password" placeholder="Enter your password" /></li>
+                    </div>
+
+
+                    <div class="form-group">
+                    <li>  <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()"></li>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>
